@@ -1,0 +1,33 @@
+.projects_section {
+	padding: 5rem 2rem 5rem 2rem;
+	min-height: 100vh;
+}
+
+.projects_deck {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.project_card {
+	display: flex;
+	padding: 0.5em;
+	width: 100%;
+}
+
+.project_details {
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+	padding: 1em;
+	width: 100%;
+}
+
+.project_details p {
+	flex: 1 0 auto;
+}
+
+@media all and (min-width: 40em) {
+	.project_card {
+		width: 50%;
+	}
+}
