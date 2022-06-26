@@ -1,8 +1,17 @@
 .about_section {
-	min-height: 100vh;
+	/* min-height: 100vh; */
 	padding: 5rem 2rem 5rem 2rem;
+	margin: 5rem 0 5rem 0;
 }
 
 .about_section p {
-	font-size: 1.5rem;
+	font-size: 1rem;
+	line-height: 2rem;
+}
+
+@media all and (min-width: 40em) {
+	.about_section p {
+		font-size: 1.5rem;
+		line-height: 2.5rem;
+	}
 }
