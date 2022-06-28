@@ -1,7 +1,7 @@
 const About = () => {
 	return (
 		<section id="about" className="about_section">
-			<h2>About Me</h2>
+			<h2 className="section-title">About Me</h2>
 			<p>
 				Hi! 👋🏼, my name is Ricardo Ramos. I am a software developer who is
 				passionate about creating and optimizing solutions with tech. I enjoy

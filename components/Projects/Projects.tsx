@@ -3,10 +3,10 @@ import ProjectCard from "./ProjectCard"
 import contentfulClient from "../Contentful/contentful"
 import { TypeClientProjectsFields } from "../../types"
 
-const Projects = (props: any) => {
+const Projects = () => {
 	const [projects, setProjects] = useState<TypeClientProjectsFields[]>([])
 	useEffect(() => {
-		async function getItems() {
+		async function fetchClientProjects() {
 			let arr: any = []
 			const items = await contentfulClient
 				.getEntries<TypeClientProjectsFields>({
@@ -19,11 +19,11 @@ const Projects = (props: any) => {
 				})
 			setProjects(arr)
 		}
-		getItems()
+		fetchClientProjects()
 	}, [])
 	return (
 		<section id="projects" className="projects_section">
-			<h2>Projects</h2>
+			<h2 className="section-title">Projects</h2>
 			<div className="projects_deck">
 				{projects &&
 					projects.map((p: TypeClientProjectsFields, index: number) => (
@@ -32,14 +32,6 @@ const Projects = (props: any) => {
 			</div>
 		</section>
 	)
-}
-
-export function getStaticProps() {
-	return {
-		props: {
-			test: process.env.TEST,
-		},
-	}
 }
 
 export default Projects
